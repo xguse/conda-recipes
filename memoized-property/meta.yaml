@@ -1,11 +1,11 @@
 package:
-  name: appdirs
-  version: "1.4.0"
+  name: memoized-property
+  version: "1.0.2"
 
 source:
-  fn: appdirs-1.4.0.tar.gz
-  url: https://pypi.python.org/packages/source/a/appdirs/appdirs-1.4.0.tar.gz
-  md5: 1d17b4c9694ab84794e228f28dc3275b
+  fn: memoized-property-1.0.2.tar.gz
+  url: https://pypi.python.org/packages/source/m/memoized-property/memoized-property-1.0.2.tar.gz
+  md5: cd32a557124e7f161a93434c465fe57d
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -17,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - appdirs = appdirs:main
+    # - memoized-property = memoized-property:main
     #
-    # Would create an entry point called appdirs that calls appdirs.main()
+    # Would create an entry point called memoized-property that calls memoized-property.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -51,9 +51,9 @@ requirements:
     # - nose
 
 about:
-  home: http://github.com/ActiveState/appdirs
-  license: MIT License
-  summary: 'A small Python module for determining appropriate " +         "platform-specific dirs, e.g. a "user data dir".'
+  home: https://github.com/estebistec/python-memoized-property
+  license: BSD License
+  summary: 'A simple python decorator for defining properties that only run their fget function once'
 
 # See
 # http://docs.continuum.io/conda/build.html for

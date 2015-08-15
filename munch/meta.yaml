@@ -1,11 +1,11 @@
 package:
-  name: appdirs
-  version: "1.4.0"
+  name: munch
+  version: "2.0.2"
 
 source:
-  fn: appdirs-1.4.0.tar.gz
-  url: https://pypi.python.org/packages/source/a/appdirs/appdirs-1.4.0.tar.gz
-  md5: 1d17b4c9694ab84794e228f28dc3275b
+  fn: munch-2.0.2.tar.gz
+  url: https://pypi.python.org/packages/source/m/munch/munch-2.0.2.tar.gz
+  md5: 6bff44f4f33b0af4f6f991a996f5a314
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -17,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - appdirs = appdirs:main
+    # - munch = munch:main
     #
-    # Would create an entry point called appdirs that calls appdirs.main()
+    # Would create an entry point called munch that calls munch.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -34,9 +34,10 @@ requirements:
   run:
     - python
 
-# test:
+test:
   # Python imports
-  # imports:
+  imports:
+    - munch
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -51,9 +52,9 @@ requirements:
     # - nose
 
 about:
-  home: http://github.com/ActiveState/appdirs
+  home: http://github.com/Infinidat/munch
   license: MIT License
-  summary: 'A small Python module for determining appropriate " +         "platform-specific dirs, e.g. a "user data dir".'
+  summary: 'A dot-accessible dictionary (a la JavaScript objects)'
 
 # See
 # http://docs.continuum.io/conda/build.html for

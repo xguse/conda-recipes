@@ -1,11 +1,11 @@
 package:
-  name: appdirs
-  version: "1.4.0"
+  name: progressbar33
+  version: "2.4"
 
 source:
-  fn: appdirs-1.4.0.tar.gz
-  url: https://pypi.python.org/packages/source/a/appdirs/appdirs-1.4.0.tar.gz
-  md5: 1d17b4c9694ab84794e228f28dc3275b
+  fn: progressbar33-2.4.tar.gz
+  url: https://pypi.python.org/packages/source/p/progressbar33/progressbar33-2.4.tar.gz
+  md5: 94c114ea62aaae93489848f5bdb0bbe7
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -17,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - appdirs = appdirs:main
+    # - progressbar33 = progressbar33:main
     #
-    # Would create an entry point called appdirs that calls appdirs.main()
+    # Would create an entry point called progressbar33 that calls progressbar33.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -34,9 +34,10 @@ requirements:
   run:
     - python
 
-# test:
+test:
   # Python imports
-  # imports:
+  imports:
+    - progressbar
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -51,9 +52,9 @@ requirements:
     # - nose
 
 about:
-  home: http://github.com/ActiveState/appdirs
-  license: MIT License
-  summary: 'A small Python module for determining appropriate " +         "platform-specific dirs, e.g. a "user data dir".'
+  home: http://github.com/germangh/python-progressbar
+  license: GNU Library or Lesser General Public License (LGPL) or BSD License
+  summary: 'Text progress bar library for Python.'
 
 # See
 # http://docs.continuum.io/conda/build.html for
