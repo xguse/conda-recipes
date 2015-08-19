@@ -1,0 +1,60 @@
+package:
+  name: pyrad-seq
+  # version: {{ environ['GIT_DESCRIBE_TAG'] }}
+  version: 3.0.6
+
+source:
+  # git_tag: {{ environ['GIT_DESCRIBE_TAG'] }}
+  git_url: https://github.com/dereneaton/pyrad.git
+
+build:
+  # preserve_egg_dir: True
+  entry_points:
+
+    - pyrad = pyrad.pyRAD:main
+
+  # number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
+  # Note that this will override the default build string with the Python
+  # and NumPy versions
+  string: {{ environ.get('GIT_BUILD_STR', '') }}
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - scipy
+
+  run:
+    - python
+    - numpy
+    - scipy
+
+
+
+test:
+  # Python imports
+  imports:
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+    - pyrad -h
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dereneaton/pyrad
+  license: GPL3 License
+  summary: 'Assembly and analysis of RADseq data sets.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
