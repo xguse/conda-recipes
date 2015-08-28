@@ -1,0 +1,25 @@
+package:
+  name: vsearch
+  version: 1.1.3
+
+source:
+  fn: vsearch-1.1.3-linux-x86_64
+  url: https://github.com/torognes/vsearch/releases/download/v1.1.3/vsearch-1.1.3-linux-x86_64
+  md5: 704a47227683e34f724051b283ee9128
+
+build:
+  number: 0
+  string: linux_x86_64
+
+test:
+  commands:
+    - vsearch --help
+
+about:
+  home: https://github.com/torognes/vsearch
+  license: AGLP3 License
+  summary: 'Open and free 64-bit multithreaded tool for processing metagenomic sequences, including searching, clustering, chimera detection, dereplication, sorting, masking and shuffling'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
