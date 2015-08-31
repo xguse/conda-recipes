@@ -1,11 +1,11 @@
 package:
-  name: gitpython
-  version: "1.0.1"
+  name: wrapt
+  version: "1.10.5"
 
 source:
-  fn: GitPython-1.0.1.tar.gz
-  url: https://pypi.python.org/packages/source/G/GitPython/GitPython-1.0.1.tar.gz
-  md5: 4659644b42c41e5e5170c0cd83ed6422
+  fn: wrapt-1.10.5.tar.gz
+  url: https://pypi.python.org/packages/source/w/wrapt/wrapt-1.10.5.tar.gz
+  md5: 79732bbc096235704e7523d3bacd202c
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -17,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - gitpython = gitpython:main
+    # - wrapt = wrapt:main
     #
-    # Would create an entry point called gitpython that calls gitpython.main()
+    # Would create an entry point called wrapt that calls wrapt.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -29,25 +29,14 @@ source:
 requirements:
   build:
     - python
-    - setuptools
-    - gitdb >=0.6.4
 
   run:
     - python
-    - gitdb >=0.6.4
 
 test:
   # Python imports
   imports:
-    - git
-    - git.index
-    - git.objects
-    - git.objects.submodule
-    - git.refs
-    - git.repo
-    - git.test
-    - git.test.lib
-    - git.test.performance
+    - wrapt
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -62,9 +51,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/gitpython-developers/GitPython
+  home: https://github.com/GrahamDumpleton/wrapt
   license: BSD License
-  summary: 'Python Git Library'
+  summary: 'Module for decorators, wrappers and monkey patching.'
 
 # See
 # http://docs.continuum.io/conda/build.html for

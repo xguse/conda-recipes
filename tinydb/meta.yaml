@@ -1,11 +1,11 @@
 package:
-  name: gitpython
-  version: "1.0.1"
+  name: tinydb
+  version: "2.4"
 
 source:
-  fn: GitPython-1.0.1.tar.gz
-  url: https://pypi.python.org/packages/source/G/GitPython/GitPython-1.0.1.tar.gz
-  md5: 4659644b42c41e5e5170c0cd83ed6422
+  fn: tinydb-2.4.zip
+  url: https://pypi.python.org/packages/source/t/tinydb/tinydb-2.4.zip
+  md5: f70669dd2c6572075de38d7e3add8487
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -17,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - gitpython = gitpython:main
+    # - tinydb = tinydb:main
     #
-    # Would create an entry point called gitpython that calls gitpython.main()
+    # Would create an entry point called tinydb that calls tinydb.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -30,24 +30,15 @@ requirements:
   build:
     - python
     - setuptools
-    - gitdb >=0.6.4
 
   run:
     - python
-    - gitdb >=0.6.4
 
 test:
   # Python imports
   imports:
-    - git
-    - git.index
-    - git.objects
-    - git.objects.submodule
-    - git.refs
-    - git.repo
-    - git.test
-    - git.test.lib
-    - git.test.performance
+    - tests
+    - tinydb
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -62,9 +53,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/gitpython-developers/GitPython
-  license: BSD License
-  summary: 'Python Git Library'
+  home: https://github.com/msiemens/tinydb
+  license: MIT License
+  summary: 'TinyDB is a tiny, document oriented database optimized for your happiness :)'
 
 # See
 # http://docs.continuum.io/conda/build.html for

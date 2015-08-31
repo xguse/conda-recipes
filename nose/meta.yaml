@@ -1,26 +1,28 @@
 package:
-  name: gitpython
-  version: "1.0.1"
+  name: nose
+  version: "1.3.7"
 
 source:
-  fn: GitPython-1.0.1.tar.gz
-  url: https://pypi.python.org/packages/source/G/GitPython/GitPython-1.0.1.tar.gz
-  md5: 4659644b42c41e5e5170c0cd83ed6422
+  fn: nose-1.3.7.tar.gz
+  url: https://pypi.python.org/packages/source/n/nose/nose-1.3.7.tar.gz
+  md5: 4d3ad0ff07b61373d2cefc89c5d0b20b
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # noarch_python: True
-  # preserve_egg_dir: True
-  # entry_points:
+  preserve_egg_dir: True
+  entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - gitpython = gitpython:main
+    # - nose = nose:main
     #
-    # Would create an entry point called gitpython that calls gitpython.main()
+    # Would create an entry point called nose that calls nose.main()
 
+    - nosetests = nose:run_exit
+    - nosetests-2.7 = nose:run_exit
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
@@ -30,29 +32,26 @@ requirements:
   build:
     - python
     - setuptools
-    - gitdb >=0.6.4
 
   run:
     - python
-    - gitdb >=0.6.4
+    - setuptools
 
 test:
   # Python imports
   imports:
-    - git
-    - git.index
-    - git.objects
-    - git.objects.submodule
-    - git.refs
-    - git.repo
-    - git.test
-    - git.test.lib
-    - git.test.performance
+    - nose
+    - nose.ext
+    - nose.plugins
+    - nose.sphinx
+    - nose.tools
 
-  # commands:
+  commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
+    - nosetests --help
+    - nosetests-2.7 --help
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
@@ -62,9 +61,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/gitpython-developers/GitPython
-  license: BSD License
-  summary: 'Python Git Library'
+  home: http://readthedocs.org/docs/nose/
+  license: GNU Library or Lesser General Public License (LGPL)
+  summary: 'nose extends unittest to make testing easier'
 
 # See
 # http://docs.continuum.io/conda/build.html for
