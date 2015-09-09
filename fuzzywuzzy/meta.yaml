@@ -1,28 +1,26 @@
 package:
-  name: ptpython
-  version: "0.21"
+  name: fuzzywuzzy
+  version: "0.6.1"
 
 source:
-  fn: ptpython-0.21.tar.gz
-  url: https://pypi.python.org/packages/source/p/ptpython/ptpython-0.21.tar.gz
-  md5: d47bd868a3474b4f74413dcab19f7b4c
+  fn: fuzzywuzzy-0.6.1.tar.gz
+  url: https://pypi.python.org/packages/source/f/fuzzywuzzy/fuzzywuzzy-0.6.1.tar.gz
+  md5: adc12a4372ed9bf0e3e2fe7be24cc9dc
 #  patches:
    # List any patch files here
    # - fix.patch
 
-build:
+# build:
   # noarch_python: True
   # preserve_egg_dir: True
-  entry_points:
+  # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - ptpython = ptpython:main
+    # - fuzzywuzzy = fuzzywuzzy:main
     #
-    # Would create an entry point called ptpython that calls ptpython.main()
+    # Would create an entry point called fuzzywuzzy that calls fuzzywuzzy.main()
 
-    - ptpython = ptpython.entry_points.run_ptpython:run
-    - ptipython = ptpython.entry_points.run_ptipython:run
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
@@ -32,29 +30,19 @@ requirements:
   build:
     - python
     - setuptools
-    - prompt_toolkit >=0.46
-    - jedi >=0.9.0
-    - docopt
 
   run:
     - python
-    - prompt_toolkit >=0.46
-    - jedi >=0.9.0
-    - docopt
 
 test:
   # Python imports
   imports:
-    - ptpython
-    - ptpython.contrib
-    - ptpython.entry_points
+    - fuzzywuzzy
 
-  commands:
+  # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
-    - ptpython --help
-    - ptipython --help
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
@@ -64,9 +52,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/jonathanslenders/ptpython
-  license: UNKNOWN
-  summary: 'Python REPL build on top of prompt_toolkit'
+  home: https://github.com/seatgeek/fuzzywuzzy
+  license: 
+  summary: 'Fuzzy string matching in python'
 
 # See
 # http://docs.continuum.io/conda/build.html for
