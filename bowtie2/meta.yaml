@@ -1,0 +1,31 @@
+package:
+  name: bowtie2
+  version: 2.2.6
+
+source:
+  fn: bowtie2-2.2.6-linux-x86_64.zip
+  url: http://downloads.sourceforge.net/project/bowtie-bio/bowtie2/2.2.6/bowtie2-2.2.6-linux-x86_64.zip
+  md5: 074884c2989437491685cfdec649d424
+
+
+build:
+  number: 0
+
+requirements:
+  run:
+    - python
+
+test:
+  commands:
+    - bowtie2 --help
+    - bowtie2-build --help
+    - bowtie2-inspect --help
+
+about:
+  home: https://www.cog-genomics.org/plink2
+  license: GLP3 License
+  summary: 'Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
