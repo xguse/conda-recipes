@@ -30,6 +30,8 @@ requirements:
     - python
     - numpy
     - scipy
+    - vsearch
+    - muscle
 
 
 
