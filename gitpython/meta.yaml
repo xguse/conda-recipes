@@ -29,11 +29,15 @@ source:
 requirements:
   build:
     - python
+    - nose
+    - mock
     - setuptools
     - gitdb >=0.6.4
 
   run:
     - python
+    - nose
+    - mock
     - gitdb >=0.6.4
 
 test:

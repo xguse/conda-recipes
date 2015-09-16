@@ -35,6 +35,8 @@ requirements:
     - tinydb
     - jinja2
     - docopt
+    - nose
+    - nosexcover
     - gitpython
     - gitdb
     - flask
@@ -49,6 +51,8 @@ requirements:
     - tinydb
     - jinja2
     - docopt
+    - nose
+    - nosexcover
     - gitpython
     - gitdb
     - flask
