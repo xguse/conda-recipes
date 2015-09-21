@@ -1,0 +1,27 @@
+package:
+  name: bedtools
+  version: 2.25.0
+
+
+source:
+  git_url: https://github.com/arq5x/bedtools2.git
+  git_tag: v2.25.0
+
+
+build:
+  number: 1
+  # string: 
+
+# requirements:
+
+
+test:
+  commands:
+    - bedtools -h
+    - "cd $SRC_DIR/test && bash test.sh"
+
+about:
+  home: https://github.com/arq5x/bedtools2
+  license: GPL2
+  license_file: LICENSE
+  summary: 'Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF.'

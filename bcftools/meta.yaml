@@ -1,0 +1,28 @@
+package:
+  name: bcftools
+  version: 1.2
+
+
+source:
+  fn: bcftools-1.2.tar.bz2
+  url: https://github.com/samtools/bcftools/releases/download/1.2/bcftools-1.2.tar.bz2
+  sha256: 53c628339020dd45334a007c9cefdaf1cba3f1032492ec813b116379fa684fd6
+
+
+build:
+  number: 1
+  # string: 
+
+# requirements:
+
+
+test:
+  commands:
+    - "cd $SRC_DIR && make test"
+    - bcftools --help
+
+about:
+  home: http://www.htslib.org/
+  license: MIT
+  license_file: LICENSE
+  summary: 'Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarizing SNP and short indel sequence variants'

@@ -1,0 +1,28 @@
+package:
+  name: hmmer
+  version: 3.1b2
+
+
+source:
+  fn: hmmer-3.1b2.tar.gz
+  url: http://selab.janelia.org/software/hmmer3/3.1b2/hmmer-3.1b2.tar.gz
+  sha256: dd16edf4385c1df072c9e2f58c16ee1872d855a018a2ee6894205277017b5536
+
+
+build:
+  number: 1
+  # string: 
+
+# requirements:
+
+
+test:
+  commands:
+    - "cd $SRC_DIR && make check"
+    - hmmsearch -h
+
+about:
+  home: http://hmmer.janelia.org/
+  license: GPL3
+  license_file: LICENSE
+  summary: 'HMMER is used for searching sequence databases for homologs of protein sequences, and for making protein sequence alignments. It implements methods using probabilistic models called profile hidden Markov models (profile HMMs).'
