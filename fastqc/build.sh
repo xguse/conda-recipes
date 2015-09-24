@@ -10,9 +10,14 @@ chmod 775 fastqc
 # install package
 cp -a $PWD/* $INSTALL_DIR
 
-# create link to executable in bin
+# make a bin dir
 BIN=$PREFIX/bin
 mkdir $BIN
-ln $INSTALL_DIR/fastqc $BIN/fastqc
+
+# move to BIN and make RELATIVE sym link to launch script
+cd $BIN
+ln -s ../apps/java_apps/FastQC/fastqc
+
+# let me examine results
 cp -a $PREFIX ~/tmp/conda/PREFIX
 
