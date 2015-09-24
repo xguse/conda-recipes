@@ -1,0 +1,25 @@
+package:
+  name: picard
+  version: 1.139
+
+source:
+  git_url: https://github.com/broadinstitute/picard.git
+  git_tag: 1.139
+
+
+build:
+  number: 1
+  # string: 
+
+# requirements:
+
+
+test:
+  commands:
+    - xxxxxx
+
+about:
+  home: http://broadinstitute.github.io/picard/
+  license: xxxxx
+  license_file: xxxxxxx
+  summary: 'xxxxxxxxxxxxxx'

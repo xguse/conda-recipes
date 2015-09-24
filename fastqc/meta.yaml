@@ -1,0 +1,28 @@
+package:
+  name: fastqc
+  version: 0.11.3
+
+
+source:
+  fn: fastqc_v0.11.3.zip
+  url: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.3.zip
+  git_tag: v2.25.0
+
+
+build:
+  number: 1
+  # string: 
+
+# requirements:
+
+
+test:
+  commands:
+    - java -version
+    - fastqc --help
+
+about:
+  home: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+  license: GPL3
+  license_file: LICENSE.txt
+  summary: 'A Java-based quality control tool for high throughput sequence data.'
