@@ -1,10 +1,10 @@
 package:
-  name: pysam
-  version: "0.8.3"
+  name: pybedtools
+  version: "0.7.0"
 
 source:
-  git_url: https://github.com/pysam-developers/pysam.git
-  git_rev: 80da44675f8182c609830726ae6dc70be3ee5192
+  git_url: https://github.com/daler/pybedtools.git
+  git_tag: v0.7.0
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -16,9 +16,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - pysam = pysam:main
+    # - pybedtools = pybedtools:main
     #
-    # Would create an entry point called pysam that calls pysam.main()
+    # Would create an entry point called pybedtools that calls pybedtools.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -28,25 +28,23 @@ source:
 requirements:
   build:
     - python
-    - cython
     - setuptools
-    - samtools
-    - htslib
+    - six
+    - pysam
 
   run:
     - python
-    - cython
-    - samtools
-    - htslib
+    - six
+    - pysam
+
 test:
   # Python imports
   imports:
-    - pysam
-    - pysam.include
-    # - pysam.include.htslib
-    # - pysam.include.htslib.htslib
-    - pysam.include.samtools
-    - pysam.include.samtools.win32
+    - pybedtools
+    - pybedtools.contrib
+    - pybedtools.scripts
+    - pybedtools.test
+    - pybedtools.test.data
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -61,10 +59,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/pysam-developers/pysam
-  license: MITpysam
-
-  summary: "Pysam is a python module for reading and manipulating Samfiles. It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix."
+  home: https://github.com/daler/pybedtools
+  license: GNU General Public License (GPL)
+  summary: 'Wrapper around BEDTools for bioinformatics work'
 
 # See
 # http://docs.continuum.io/conda/build.html for
