@@ -1,0 +1,72 @@
+package:
+  name: spartan
+  version: "0.0.1"
+
+source:
+  git_url: https://github.com/xguse/spartan.git
+  git_tag: "20151001.3"
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # noarch_python: True
+  preserve_egg_dir: True
+  entry_points:
+    - xls_to_csvs = spartan.scripts.xls_to_csvs:main
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+  string: {{ environ['GIT_DESCRIBE_TAG'] }}
+
+requirements:
+  build:
+    - python
+    - gffutils
+    - pyfasta
+    - xlrd
+    - docopt
+    - arrow
+    - pandas
+    - numpy
+    - munch
+    - sanitize ==0.0.2
+  run:
+    - python
+    - gffutils
+    - pyfasta
+    - xlrd
+    - docopt
+    - arrow
+    - pandas
+    - numpy
+    - munch
+    - sanitize ==0.0.2
+
+test:
+  # Python imports
+  imports:
+    - spartan
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+    - nosetests spartan
+    - xls_to_csvs --help
+
+  requires:
+    # Put any additional test requirements here.  For example
+    - nose
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+about:
+  home: https://github.com/xguse/spartan
+  license: MIT License
+  summary: 'A spartan bioinformatics package, providing only the essentials and nothing fancy or luxurious. Enough to get the job done quickly without flourish.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

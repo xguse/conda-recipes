@@ -1,0 +1,27 @@
+package:
+  name: sanitize
+  version: 0.0.2
+
+source:
+  git_url: https://github.com/ksze/sanitize.git
+  git_tag: v0.0.2
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+
+  run:
+    - python
+
+
+test:
+  imports:
+    - sanitize
+
+about:
+  home: https://github.com/ksze/sanitize
+  license: Custom
+  license_file: LICENSE
+  summary: 'A Python 2.7/3.2+ module that aims to sanitize filenames in a cross-platform, cross-filesystem manner.'
