@@ -1,0 +1,33 @@
+package:
+  name: bioconductor-biocgenerics
+  # Note that conda versions cannot contain -, so any -'s in the version have
+  # been replaced with _'s.
+  version: "0.12.1"
+
+source:
+  path: src
+
+build:
+  number: 0
+
+  rpaths:
+    - lib/R/lib/
+    - lib/
+
+requirements:
+  build:
+    - r >=3.0.0
+
+  run:
+    - r >=3.0.0
+
+test:
+  commands:
+    # You can put additional test commands to be run here.
+    - $R -e "library('BiocGenerics')" # [not win]
+
+about:
+  home: http://www.bioconductor.org/packages/release/bioc/html/BiocGenerics.html
+  license: Artistic-2.0
+  summary: S4 generic functions for Bioconductor.
+

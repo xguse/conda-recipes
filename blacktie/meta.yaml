@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/xguse/blacktie.git
-  git_tag: v0.2.1.2
+  git_tag: a17541a0e41cd804d2b8239338846982af783d18
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -26,7 +26,7 @@ build:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 2
 
 requirements:
   build:
@@ -35,12 +35,30 @@ requirements:
     - pyyaml
     - mako
     - rpy2
+    - sh
+    - munch
+    - nose
+    - pytest
+    - bowtie2
+    - tophat
+    - cufflinks
+    # - cummerbund
+    - r <3.2q
 
   run:
     - python
     - pyyaml
     - mako
     - rpy2
+    - sh
+    - munch
+    - nose
+    - pytest
+    - bowtie2
+    - tophat
+    - cufflinks
+    # - cummerbund
+    - r <3.2q
 
 test:
   # Python imports
@@ -60,9 +78,9 @@ test:
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
 
-  # requires:
+  requires:
     # Put any additional test requirements here.  For example
-    # - nose
+    - pytest
 
 about:
   home: https://github.com/xguse/blacktie

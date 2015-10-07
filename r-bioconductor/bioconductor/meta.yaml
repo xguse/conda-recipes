@@ -1,0 +1,37 @@
+package:
+  name: biocinstaller
+  version: "1.18.4"
+
+source:
+  fn: BiocInstaller_1.18.4.tar.gz
+  url: http://watson.nci.nih.gov/bioc_mirror/packages/release/bioc/src/contrib/BiocInstaller_1.18.4.tar.gz
+
+build:
+  number: 0
+
+  rpaths:
+    - lib/
+    - lib/R/lib/
+
+
+requirements:
+  build:
+    - gnureadline
+    - r <3.2.0
+    - r-recommended
+
+  run:
+    - gnureadline
+    - r <3.2.0
+    - r-recommended
+
+test:
+  commands:
+    # You can put additional test commands to be run here.
+    - $R -e "library(BiocInstaller)" # [not win]
+
+about:
+  home: http://watson.nci.nih.gov/bioc_mirror/packages/release/bioc/html/BiocInstaller.html
+  license: Artistic-2.0
+  summary: This package is used to install and update Bioconductor, CRAN, and (some) github packages.
+

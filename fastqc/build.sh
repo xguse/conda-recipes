@@ -4,7 +4,7 @@
 INSTALL_DIR=$PREFIX/apps/java_apps/FastQC
 mkdir -p $INSTALL_DIR
 
-# make scrip executable
+# make script executable
 chmod 775 fastqc
 
 # install package
@@ -18,6 +18,6 @@ mkdir $BIN
 cd $BIN
 ln -s ../apps/java_apps/FastQC/fastqc
 
-# let me examine results
-cp -a $PREFIX ~/tmp/conda/PREFIX
+# # let me examine results
+# cp -a $PREFIX ~/tmp/conda/PREFIX
 

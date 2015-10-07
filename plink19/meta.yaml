@@ -1,14 +1,14 @@
 package:
   name: plink
-  version: 1.90b3w
+  version: 1.90b1g
 
 source:
   fn: plink_linux_x86_64.zip
-  url: https://www.cog-genomics.org/static/bin/plink150903/plink_linux_x86_64.zip
-  md5: fbcee164554591c93da5c19838cf37fb
+  url: http://pngu.mgh.harvard.edu/~purcell/static/bin/plink140618/plink_linux_x86_64.zip
+  sha256: 1150d15158226e2004413180d94753055574b2268fc88b8b2bedbcb453bcfd42
 
 build:
-  number: 0
+  number: 1
 
 test:
   commands:
@@ -18,6 +18,7 @@ test:
 about:
   home: https://www.cog-genomics.org/plink2
   license: GLP3 License
+  license_file: LICENSE
   summary: 'PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner.'
 
 # See

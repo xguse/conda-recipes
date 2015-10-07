@@ -1,0 +1,37 @@
+package:
+  name: cufflinks
+  version: 2.2.1
+
+source:
+  fn: cufflinks-2.2.1.Linux_x86_64.tar.gz
+  url: http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
+  sha256: 39f812452cae26462e5d2671d38104d9e8ef30aaf9ab6dea8ca57f50f46448e4
+
+
+build:
+  number: 1
+
+requirements:
+  run:
+    - python
+
+# test:
+#   commands:
+#     - cuffcompare --help
+#     - cuffdiff --help
+#     - cufflinks --help
+#     - cuffmerge --help
+#     - cuffnorm --help
+#     - cuffquant --help
+#     - gffread --help
+#     - gtf_to_sam --help
+
+about:
+  home: hhttp://cole-trapnell-lab.github.io/cufflinks
+  license: "Boost Software License, Version 1.0"
+  license_file: LICENSE
+  summary: 'Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. It accepts aligned RNA-Seq reads and assembles the alignments into a parsimonious set of transcripts. Cufflinks then estimates the relative abundances of these transcripts based on how many reads support each one, taking into account biases in library preparation protocols.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
