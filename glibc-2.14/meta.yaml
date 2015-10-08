@@ -1,0 +1,13 @@
+package:
+  name: glibc
+  version: 2.14
+
+source:
+  fn: glibc-2.14.tar.xz
+  url: http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.xz
+  sha256: 4b20592dd4c841e54fde4c0f1d28cc75f91fb61fb3e91a906d5025dd187bfb08
+
+about:
+  home: http://www.gnu.org/software/libc/
+  license: LGPL
+  summary: "Any Unix-like operating system needs a C library: the library which defines the ``system calls'' and other basic facilities such as open, malloc, printf, exit..."

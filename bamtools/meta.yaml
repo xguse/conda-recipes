@@ -1,0 +1,26 @@
+package:
+  name: bamtools
+  version: 0.1.14
+
+source:
+  git_url: https://github.com/vcftools/vcftools.git
+  git_tag: v0.1.14
+
+build:
+  number: 1
+  # string: jupiter
+
+requirements:
+  build:
+
+  run:
+    - htslib
+
+test:
+  commands:
+    - vcftools
+
+about:
+  home: https://vcftools.github.io/
+  license: GNU LGPL
+  summary: "The aim of VCFtools is to provide easily accessible methods for working with complex genetic variation data in the form of VCF files."
