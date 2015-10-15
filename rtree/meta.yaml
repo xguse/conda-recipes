@@ -1,24 +1,25 @@
 package:
-  name: click
-  version: "5.1"
+  name: rtree
+  version: "0.8.2"
 
 source:
-  fn: click-5.1.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-5.1.tar.gz
-  sha256: 678c98275431fad324275dec63791e4a17558b40e5a110e20a82866139a85a5a
+  fn: Rtree-0.8.2.tar.gz
+  url: https://pypi.python.org/packages/source/R/Rtree/Rtree-0.8.2.tar.gz
+  md5: 4ba7276cbdb4c51b373068004ae864d3
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
-  # preserve_egg_dir: True
+build:
+  # noarch_python: True
+  preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - click = click:main
+    # - rtree = rtree:main
     #
-    # Would create an entry point called click that calls click.main()
+    # Would create an entry point called rtree that calls rtree.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -32,11 +33,12 @@ requirements:
 
   run:
     - python
+    - setuptools
 
 test:
   # Python imports
   imports:
-    - click
+    - rtree
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -51,9 +53,9 @@ test:
     # - nose
 
 about:
-  home: http://github.com/mitsuhiko/click
-  license: BSD License
-  summary: 'A simple wrapper around optparse for powerful command line utilities.'
+  home: http://toblerity.github.com/rtree/
+  license: GNU Library or Lesser General Public License (LGPL)
+  summary: 'R-Tree spatial index for Python GIS'
 
 # See
 # http://docs.continuum.io/conda/build.html for

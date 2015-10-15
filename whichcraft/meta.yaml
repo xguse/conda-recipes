@@ -1,24 +1,25 @@
 package:
-  name: click
-  version: "5.1"
+  name: whichcraft
+  version: "0.1.1"
 
 source:
-  fn: click-5.1.tar.gz
-  url: https://pypi.python.org/packages/source/c/click/click-5.1.tar.gz
-  sha256: 678c98275431fad324275dec63791e4a17558b40e5a110e20a82866139a85a5a
+  fn: whichcraft-0.1.1.tar.gz
+  url: https://pypi.python.org/packages/source/w/whichcraft/whichcraft-0.1.1.tar.gz
+  md5: fb85ed3feebd330a8c46a101dad35dd6
 #  patches:
    # List any patch files here
    # - fix.patch
 
 # build:
+  # noarch_python: True
   # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - click = click:main
+    # - whichcraft = whichcraft:main
     #
-    # Would create an entry point called click that calls click.main()
+    # Would create an entry point called whichcraft that calls whichcraft.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -33,10 +34,9 @@ requirements:
   run:
     - python
 
-test:
+# test:
   # Python imports
-  imports:
-    - click
+  # imports:
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -51,9 +51,9 @@ test:
     # - nose
 
 about:
-  home: http://github.com/mitsuhiko/click
+  home: https://github.com/pydanny/whichcraft
   license: BSD License
-  summary: 'A simple wrapper around optparse for powerful command line utilities.'
+  summary: 'This package provides cross-platform cross-python shutil.which functionality.'
 
 # See
 # http://docs.continuum.io/conda/build.html for

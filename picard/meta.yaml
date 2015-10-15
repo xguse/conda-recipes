@@ -1,10 +1,10 @@
 package:
   name: picard
-  version: 1.139
+  version: 1.140
 
 source:
   git_url: https://github.com/broadinstitute/picard.git
-  git_tag: 1.139
+  git_tag: 1.140
 
 
 build:

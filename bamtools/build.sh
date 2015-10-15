@@ -1,7 +1,14 @@
 #!/bin/bash -x
 
 
-./autogen.sh
-./configure --prefix $PREFIX
+mkdir build
+cd build
+cmake ..
+
 make
-make install
+
+cd ..
+
+cp -a bin $PREFIX/bin
+cp -a lib $PREFIX/lib
+cp -a include $PREFIX/include
