@@ -5,7 +5,7 @@ package:
 source:
   fn: parallel-20150922.tar.bz2
   url: http://gnu.mirror.iweb.com/parallel/parallel-20150922.tar.bz2
-  md5: f2b485fabdca6492d892c57f50d112a7693f8dc088f74787c98eeb2aa11cee17
+  sha256: f2b485fabdca6492d892c57f50d112a7693f8dc088f74787c98eeb2aa11cee17
 
 build:
   number: 1
@@ -13,7 +13,7 @@ build:
 
 test:
   commands:
-    - musqcle -version
+    - "man parallel 2>&1 cat | grep -i parallel"
 
 about:
   home: http://www.gnu.org/software/parallel/
