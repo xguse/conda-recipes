@@ -1,8 +1,3 @@
-#!/bin/bash -x
-
-
-mkdir build
-cd build
-../configure --prefix=$PREFIX
-make
-make install
+mkdir -p $PREFIX/lib/
+cp /lib/libc.* $PREFIX/lib/
+cp /lib/libc-* $PREFIX/lib/
