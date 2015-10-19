@@ -1,0 +1,27 @@
+package:
+  name: bayescan
+  version: 2.1
+
+
+source:
+  fn: BayeScan2.1.zip
+  url: http://cmpg.unibe.ch/software/BayeScan/files/BayeScan2.1.zip
+  sha256: c6bbc52a5a6a30e895951faf2bd6291ca47fdccdc708e693fce02389548d5547
+
+
+build:
+  number: 1
+  # string:
+
+# requirements:
+
+
+test:
+  commands:
+    - bayescan2
+
+about:
+  home: http://cmpg.unibe.ch/software/BayeScan/index.html
+  license: GPL3
+  license_file: LICENSE
+  summary: 'xxx'

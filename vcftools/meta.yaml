@@ -7,7 +7,7 @@ source:
   git_tag: v0.1.14
 
 build:
-  number: 1
+  number: 2
   # string: jupiter
 
 requirements:
